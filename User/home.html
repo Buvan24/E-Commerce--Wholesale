@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - WholesaleHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="app-title">WholesaleHub</h1>
+                <div class="header-icons">
+                    <a href="wishlist.html" class="icon-link">
+                        <span class="icon">♡</span>
+                    </a>
+                    <a href="cart.html" class="icon-link cart-icon">
+                        <span class="icon">🛒</span>
+                        <span class="badge" id="cartBadge">3</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Search products..." id="searchInput">
+            </div>
+        </div>
+
+        <!-- Categories -->
+        <section class="categories-section">
+            <h3>Categories</h3>
+            <div class="categories-scroll">
+                <div class="category-card" onclick="goToCategory('rice-grains')">
+                    <div class="category-icon">🌾</div>
+                    <p>Rice & Grains</p>
+                </div>
+                <div class="category-card" onclick="goToCategory('cooking-oil')">
+                    <div class="category-icon">🫙</div>
+                    <p>Cooking Oil</p>
+                </div>
+                <div class="category-card" onclick="goToCategory('spices')">
+                    <div class="category-icon">🌶️</div>
+                    <p>Spices</p>
+                </div>
+                <div class="category-card" onclick="goToCategory('biscuits')">
+                    <div class="category-icon">🍪</div>
+                    <p>Biscuits</p>
+                </div>
+                <div class="category-card" onclick="goToCategory('pulses')">
+                    <div class="category-icon">🫘</div>
+                    <p>Pulses</p>
+                </div>
+                <div class="category-card" onclick="goToCategory('tea-coffee')">
+                    <div class="category-icon">☕</div>
+                    <p>Tea & Coffee</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recently Bought -->
+        <section class="products-section">
+            <h3>Recently Bought</h3>
+            <div class="product-list" id="recentlyBought">
+                <div class="product-card">
+                    <div class="product-info">
+                        <h4 class="product-name">Tata Salt</h4>
+                        <p class="product-desc">1 Bag = 30 packets (1kg each)</p>
+                        <p class="product-price">₹850</p>
+                    </div>
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" value="2" min="1" class="qty-input" readonly>
+                            <button class="qty-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <h4 class="product-name">Fortune Sunflower Oil</h4>
+                        <p class="product-desc">1 Carton = 15 bottles (1L each)</p>
+                        <p class="product-price">₹2,100</p>
+                    </div>
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" value="1" min="1" class="qty-input" readonly>
+                            <button class="qty-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Products -->
+        <section class="products-section">
+            <h3>Recommended for You</h3>
+            <div class="product-list" id="recommendedProducts">
+                <div class="product-card">
+                    <div class="product-info">
+                        <h4 class="product-name">Parle-G Biscuits</h4>
+                        <p class="product-desc">1 Pack = 48 packets (100g each)</p>
+                        <p class="product-price">₹720</p>
+                    </div>
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" value="1" min="1" class="qty-input" readonly>
+                            <button class="qty-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <h4 class="product-name">MDH Garam Masala</h4>
+                        <p class="product-desc">1 Box = 50 packets (100g each)</p>
+                        <p class="product-price">₹1,500</p>
+                    </div>
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" value="1" min="1" class="qty-input" readonly>
+                            <button class="qty-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <h4 class="product-name">Lifebuoy Soap</h4>
+                        <p class="product-desc">1 Carton = 72 pieces (125g each)</p>
+                        <p class="product-price">₹1,440</p>
+                    </div>
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" value="1" min="1" class="qty-input" readonly>
+                            <button class="qty-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <h4 class="product-name">Coca-Cola 600ml</h4>
+                        <p class="product-desc">1 Crate = 24 bottles</p>
+                        <p class="product-price">₹480</p>
+                    </div>
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" value="1" min="1" class="qty-input" readonly>
+                            <button class="qty-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <h4 class="product-name">Aashirvaad Atta</h4>
+                        <p class="product-desc">1 Bag = 10 packets (5kg each)</p>
+                        <p class="product-price">₹2,200</p>
+                    </div>
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" value="1" min="1" class="qty-input" readonly>
+                            <button class="qty-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="home.html" class="nav-item active">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Home</span>
+            </a>
+            <a href="categories.html" class="nav-item">
+                <span class="nav-icon">📦</span>
+                <span class="nav-label">Categories</span>
+            </a>
+            <a href="orders.html" class="nav-item">
+                <span class="nav-icon">📋</span>
+                <span class="nav-label">Orders</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span class="nav-label">Profile</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

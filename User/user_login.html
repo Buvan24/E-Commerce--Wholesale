@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WholesaleTN - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-container">
+            <div class="logo">
+                <div class="logo-badge">WholesaleTN</div>
+                <p class="tagline">B2B Wholesale Platform for Retail Shops</p>
+            </div>
+
+            <div class="auth-card">
+                <h2>Login to Your Account</h2>
+
+                <button class="auth-button primary" onclick="location.href='phone-login.html'">
+                    <span class="icon">📱</span>
+                    Login with Phone Number (OTP)
+                </button>
+
+                <button class="auth-button secondary" onclick="location.href='email-login.html'">
+                    <span class="icon">✉️</span>
+                    Login with Email & Password
+                </button>
+
+                <button class="auth-button secondary" onclick="googleLogin()">
+                    <span class="icon">G</span>
+                    Login with Google
+                </button>
+
+                <p class="auth-footer">
+                    New user? <a href="signup.html">Sign up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - WholesaleTN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-container">
+            <div class="logo">
+                <div class="logo-badge">WholesaleTN</div>
+            </div>
+
+            <div class="auth-card">
+                <h2>Register Your Business</h2>
+
+                <form id="signupForm" onsubmit="registerBusiness(event)">
+                    <div class="form-group">
+                        <label for="shopName">Shop Name *</label>
+                        <input type="text" id="shopName" placeholder="Enter your shop name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ownerName">Owner/Contact Person Name *</label>
+                        <input type="text" id="ownerName" placeholder="Enter owner name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phoneSignup">Phone Number *</label>
+                        <input type="tel" id="phoneSignup" placeholder="10 digit mobile number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emailSignup">Email Address *</label>
+                        <input type="email" id="emailSignup" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shopAddress">Shop Address *</label>
+                        <textarea id="shopAddress" rows="3" placeholder="Enter complete shop address" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gstNumber">GST Number *</label>
+                        <input type="text" id="gstNumber" placeholder="Enter GST number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passwordSignup">Password *</label>
+                        <input type="password" id="passwordSignup" placeholder="Create password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password *</label>
+                        <input type="password" id="confirmPassword" placeholder="Re-enter password" required>
+                    </div>
+
+                    <button type="submit" class="auth-button primary full-width">Register</button>
+                </form>
+
+                <p class="auth-footer">
+                    Already have account? <a href="login.html">Login</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

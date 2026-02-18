@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP - WholesaleTN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-container">
+            <div class="logo">
+                <div class="logo-badge">WholesaleTN</div>
+            </div>
+
+            <div class="auth-card">
+                <h2>Enter OTP</h2>
+                <p class="otp-info">OTP sent to <span id="phoneNumber">+91 XXXXXXXXXX</span></p>
+
+                <form id="otpForm" onsubmit="verifyOTP(event)">
+                    <div class="otp-inputs">
+                        <input type="text" maxlength="1" class="otp-box" oninput="moveToNext(this, 1)">
+                        <input type="text" maxlength="1" class="otp-box" oninput="moveToNext(this, 2)">
+                        <input type="text" maxlength="1" class="otp-box" oninput="moveToNext(this, 3)">
+                        <input type="text" maxlength="1" class="otp-box" oninput="moveToNext(this, 4)">
+                        <input type="text" maxlength="1" class="otp-box" oninput="moveToNext(this, 5)">
+                        <input type="text" maxlength="1" class="otp-box" oninput="moveToNext(this, 6)">
+                    </div>
+
+                    <p class="resend-timer">Resend OTP in <span id="timer">60</span>s</p>
+                    <a href="#" class="resend-link" id="resendLink" style="display:none;" onclick="resendOTP()">Resend OTP</a>
+
+                    <button type="submit" class="auth-button primary full-width">Verify OTP</button>
+                </form>
+
+                <p class="auth-footer">
+                    <a href="phone-login.html">← Change phone number</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
